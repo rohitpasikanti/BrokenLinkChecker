@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="BrokenLinkChecker.HomeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BrokenLinkChecker"
+             mc:Ignorable="d">
+
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="401" Height="208">
+            
+
+       
+        <Button x:Name="BtnBrokenLinkChecker" Content="BrokenLinkChecker" Margin="10" Width="381" Background="#FFCCCE01" Height="84" FontSize="36" FontWeight="Bold" />
+        <Button x:Name="BtnHistory" Content="History" Margin="10" Width="381" Background="#FFCCCE01" Height="84" FontSize="36" FontWeight="Bold"/>
+            
+        </StackPanel>
+    
+</UserControl>
