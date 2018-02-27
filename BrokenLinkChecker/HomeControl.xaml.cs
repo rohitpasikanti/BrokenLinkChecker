@@ -29,9 +29,9 @@ namespace BrokenLinkChecker
        
             private void btnBrokenLinkChecker_Click(object sender, RoutedEventArgs e)
             {
-            MainWindow win = new MainWindow();
-                win.OpenProjectControl();
-            }
+            ProjectControl win = new ProjectControl();
+                             
+             }
         
     }
 }
