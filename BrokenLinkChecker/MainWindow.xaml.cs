@@ -26,15 +26,17 @@ namespace BrokenLinkChecker
             InitializeComponent();
            
         }
-        ProjectControl SelectedProjectControl = new ProjectControl();
+       
+            ProjectControl SelectedProjectControl = new ProjectControl();
         
+
         public void OpenProjectControl()
-        {
-            MainBorder.Child = new ProjectControl();
-        }
+            {
+            MainBorder.Child = SelectedProjectControl;
+            }
 
-
-        public void OpenHomeControl()
+          
+            public void OpenHomeControl()
         {
             MainBorder.Child = new HomeControl();
 

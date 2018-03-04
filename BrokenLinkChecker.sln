@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrokenLinkChecker", "BrokenLinkChecker\BrokenLinkChecker.csproj", "{B4D6890A-C1DC-44C9-B6DD-8E6244791FC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.TabControl", "..\..\..\MY PROJECT\WebCrawlerSystem\TabControl\Wpf.TabControl.csproj", "{509D06BD-AEB6-4E92-8E5B-21188EBDBD9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B4D6890A-C1DC-44C9-B6DD-8E6244791FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4D6890A-C1DC-44C9-B6DD-8E6244791FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4D6890A-C1DC-44C9-B6DD-8E6244791FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{509D06BD-AEB6-4E92-8E5B-21188EBDBD9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{509D06BD-AEB6-4E92-8E5B-21188EBDBD9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{509D06BD-AEB6-4E92-8E5B-21188EBDBD9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{509D06BD-AEB6-4E92-8E5B-21188EBDBD9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

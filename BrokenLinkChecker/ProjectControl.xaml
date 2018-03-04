@@ -4,10 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BrokenLinkChecker"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" xmlns:wpf="clr-namespace:Wpf.Controls;assembly=Wpf.TabControl"
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="150,112,0,0" VerticalAlignment="Top" Width="75"/>
+        <TabControl x:Name="tabControl" Background="Transparent"  >
+     
+        </TabControl>
+
 
     </Grid>
 </UserControl>

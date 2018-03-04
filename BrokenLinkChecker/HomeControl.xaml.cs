@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace BrokenLinkChecker
 {
     /// <summary>
@@ -23,15 +24,13 @@ namespace BrokenLinkChecker
         public HomeControl()
         {
             InitializeComponent();
+            
         }
 
-
-       
-            private void btnBrokenLinkChecker_Click(object sender, RoutedEventArgs e)
-            {
-            ProjectControl win = new ProjectControl();
-                             
-             }
-        
+        private void btnBrokenLinkChecker_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow win = new MainWindow();
+                win.OpenProjectControl();
+        }
     }
 }
