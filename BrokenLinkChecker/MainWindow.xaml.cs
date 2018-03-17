@@ -39,8 +39,13 @@ namespace BrokenLinkChecker
             public void OpenHomeControl()
         {
             MainBorder.Child = new HomeControl();
+            
 
+        }
+        private void MainWindow_Loaded(Object sender, RoutedEventArgs e)
+        {
 
+            Application.Current.MainWindow=this;
         }
         
     }

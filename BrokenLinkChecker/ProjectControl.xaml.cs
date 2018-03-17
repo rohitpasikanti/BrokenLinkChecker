@@ -12,6 +12,13 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
+using Microsoft.VisualBasic;
+using System.Collections;
+using System.Diagnostics;
+using System.Text.RegularExpressions;
+using System.Threading;
+using System.Web;
 
 namespace BrokenLinkChecker
 {

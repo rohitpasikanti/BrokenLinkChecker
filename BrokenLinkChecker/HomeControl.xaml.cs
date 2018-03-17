@@ -27,10 +27,13 @@ namespace BrokenLinkChecker
             
         }
 
-        private void btnBrokenLinkChecker_Click(object sender, RoutedEventArgs e)
+      
+        private void BtnBrokenLinkChecker_Click_1(object sender, RoutedEventArgs e)
         {
-            MainWindow win = new MainWindow();
-                win.OpenProjectControl();
+            var win = new System.Windows.Window();
+            win.Content = new ProjectItemControl();
+            win.Show();
+            
         }
     }
 }

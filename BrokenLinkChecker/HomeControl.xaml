@@ -11,7 +11,7 @@
             
 
        
-        <Button x:Name="BtnBrokenLinkChecker" Content="BrokenLinkChecker" Margin="10" Width="381" Background="#FFCCCE01" Height="84" FontSize="36" FontWeight="Bold"  />
+        <Button x:Name="BtnBrokenLinkChecker" Content="BrokenLinkChecker" Margin="10" Width="381" Background="#FFCCCE01" Height="84" FontSize="36" FontWeight="Bold" Click="BtnBrokenLinkChecker_Click_1"  />
         <Button x:Name="BtnHistory" Content="History" Margin="10" Width="381" Background="#FFCCCE01" Height="84" FontSize="36" FontWeight="Bold"/>
             
         </StackPanel>
