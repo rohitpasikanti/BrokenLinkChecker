@@ -19,6 +19,9 @@ using System.Collections.ObjectModel;
 using System.Text;
 using System.Data.SQLite;
 using System.Data;
+using MySql.Data.Common;
+using MySql.Data.MySqlClient;
+
 namespace BrokenLinkChecker
 {
     public class CrawlerDetail
@@ -41,26 +44,26 @@ namespace BrokenLinkChecker
     {
 
 
-        private static string ConnectionString = "Data Source=" + str + "\\crawl.dat;Version=3;password=aysaj;";
-        private static string str;
-
+        private static string ConnectionString = "datasource=127.0.0.1;port=3306;username=root;password=;database=Mydb";
+        
+        
         public static void SaveCrawlerDetail(CrawlerDetail detail)
         {
             StringBuilder query = new StringBuilder();
-            query.AppendLine("INSERT INTO CrawlerDetail (WebsiteUrl, ProjectName, BrokenLinks, TotalCrawled, CrawlDate) VALUES (@WebsiteUrl, @ProjectName, @BrokenLinks, @TotalCrawled, @CrawlDate)");
+            query.AppendLine("INSERT INTO CrawlerDetail (WebsiteUrl, BrokenLinks, TotalCrawled, CrawlDate) VALUES (@WebsiteUrl, @BrokenLinks, @TotalCrawled, @CrawlDate)");
 
-            using (SQLiteConnection conn = new SQLiteConnection(ConnectionString))
+            using (MySqlConnection conn = new MySqlConnection(ConnectionString))
             {
-                //conn.Open();
-                using (SQLiteCommand cmd = new SQLiteCommand(query.ToString(), conn))
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand(query.ToString(), conn))
                 {
-                    cmd.Parameters.Add(new SQLiteParameter("@WebsiteUrl", detail.WebsiteUrl));
-                    cmd.Parameters.Add(new SQLiteParameter("@ProjectName", detail.ProjectName));
-                    cmd.Parameters.Add(new SQLiteParameter("@BrokenLinks", detail.BrokenLinks));
-                    cmd.Parameters.Add(new SQLiteParameter("@TotalCrawled", detail.TotalCrawled));
-                    cmd.Parameters.Add(new SQLiteParameter("@CrawlDate", detail.CrawlDate));
+                    cmd.Parameters.AddWithValue("@WebsiteUrl", detail.WebsiteUrl);
+                    
+                    cmd.Parameters.AddWithValue("@BrokenLinks", detail.BrokenLinks);
+                    cmd.Parameters.AddWithValue("@TotalCrawled", detail.TotalCrawled);
+                    cmd.Parameters.AddWithValue("@CrawlDate", detail.CrawlDate);
 
-                    //cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
@@ -71,10 +74,10 @@ namespace BrokenLinkChecker
             query.AppendLine("SELECT RowID, CrawlDate FROM CrawlerDetail WHERE WebsiteUrl=@WebsiteUrl");
             DataTable dt = new DataTable();
 
-            using (SQLiteConnection conn = new SQLiteConnection(ConnectionString))
+            using (MySqlConnection conn = new MySqlConnection(ConnectionString))
             {
-                SQLiteDataAdapter dap = new SQLiteDataAdapter(query.ToString(), conn);
-                dap.SelectCommand.Parameters.Add(new SQLiteParameter("@WebsiteUrl", websiteUrl));
+                MySqlDataAdapter dap = new MySqlDataAdapter(query.ToString(), conn);
+                dap.SelectCommand.Parameters.AddWithValue("@WebsiteUrl", websiteUrl);
                 dap.Fill(dt);
             }
 
@@ -99,9 +102,9 @@ namespace BrokenLinkChecker
             query.AppendLine("SELECT RowID, * FROM CrawlerDetail ORDER BY CrawlDate DESC");
             DataTable dt = new DataTable();
 
-            using (SQLiteConnection conn = new SQLiteConnection(ConnectionString))
+            using (MySqlConnection conn = new MySqlConnection(ConnectionString))
             {
-                SQLiteDataAdapter dap = new SQLiteDataAdapter(query.ToString(), conn);
+                MySqlDataAdapter dap = new MySqlDataAdapter(query.ToString(), conn);
                 dap.Fill(dt);
             }
 
@@ -126,7 +129,7 @@ namespace BrokenLinkChecker
                 }
 
                 item.WebsiteUrl = row["WebsiteUrl"] + "";
-                item.ProjectName = row["ProjectName"] + "";
+                
                 details.Add(item);
             }
 

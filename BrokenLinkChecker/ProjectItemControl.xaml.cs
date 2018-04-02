@@ -138,5 +138,12 @@ namespace BrokenLinkChecker
             }
 
         }
+
+        private void btnGoToHome_Click(object sender, RoutedEventArgs e)
+        {
+            var win = new System.Windows.Window();
+            win.Content = new HomeControl();
+            win.Show();
+        }
     }
 }

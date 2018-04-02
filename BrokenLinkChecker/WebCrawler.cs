@@ -45,7 +45,8 @@ namespace BrokenLinkChecker
             "php3",
             "aspx",
             "pl",
-            "cfm"
+            "cfm",
+            "/"
         };
         //
 

@@ -58,7 +58,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Button Content="GO TO HOME" Margin="10" HorizontalAlignment="Right" Style="{StaticResource CreamButton}" Name="btnGoToHome"/>
+            <Button Content="GO TO HOME" Margin="10" HorizontalAlignment="Right" Style="{StaticResource CreamButton}" Name="btnGoToHome" Click="btnGoToHome_Click"/>
 
 
             <Grid Grid.Row="1">

@@ -13,35 +13,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace BrokenLinkChecker
 {
     /// <summary>
-    /// Interaction logic for HomeControl.xaml
+    /// Interaction logic for ReportUserControl.xaml
     /// </summary>
-    public partial class HomeControl : UserControl
+    public partial class ReportUserControl : UserControl
     {
-        public HomeControl()
+        public ReportUserControl()
         {
             InitializeComponent();
-            
         }
 
-      
-        private void BtnBrokenLinkChecker_Click_1(object sender, RoutedEventArgs e)
+        private void ReportUserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (IsVisible == true)
+            {
+                ReportDataGrid.ItemsSource = CrawlerQueries.GetCrawlerDetails();
+            }
+            }
+        private void btnGoToHome_Click(object sender, RoutedEventArgs e)
         {
             var win = new System.Windows.Window();
-            win.Content = new ProjectItemControl();
+            win.Content = new HomeControl();
             win.Show();
-            
-        }
-
-        private void BtnHistory_Click(object sender, RoutedEventArgs e)
-        {
-            var win = new System.Windows.Window();
-            win.Content = new ReportUserControl();
-            win.Show();
-
         }
     }
 }
