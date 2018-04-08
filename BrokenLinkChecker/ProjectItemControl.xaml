@@ -30,12 +30,14 @@
             </Grid>
             <TextBlock Text="Results" Margin="10" FontSize="20" Grid.Row="1" TextAlignment="Center"/>
 
-            <DataGrid Name="ResultDataGrid" Margin="10,254,10,10" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" FontSize="14" RowHeight="30" Grid.Row="2" ItemsSource="{Binding Path=Pages, Mode=OneWay}" AutoGenerateColumns="False">
+            <DataGrid Name="ResultDataGrid" Margin="10,260,10,10" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" FontSize="14" RowHeight="30" Grid.Row="2" ItemsSource="{Binding Path=Pages, Mode=OneWay}" AutoGenerateColumns="False">
+                <DataGrid.BindingGroup>
+                    <BindingGroup/>
+                </DataGrid.BindingGroup>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Sr No." Width="Auto" Binding="{Binding Path=SerialNumber, Mode=OneWay}"/>
                     <DataGridTextColumn Header="Link/Url" Width="*" Binding="{Binding Path=WebsiteUrl, Mode=OneWay}"/>
                     <DataGridTextColumn Header="Status" Width="100" Binding="{Binding Path=Status, Mode=OneWay}"/>
-                    <DataGridTextColumn Header="sr"/>
                 </DataGrid.Columns>
                 <DataGrid.RowStyle>
                     <Style TargetType="DataGridRow">

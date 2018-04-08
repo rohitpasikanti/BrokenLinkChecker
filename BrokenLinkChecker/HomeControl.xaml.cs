@@ -34,14 +34,17 @@ namespace BrokenLinkChecker
             win.Content = new ProjectItemControl();
             win.Show();
             
+            
+            
         }
 
         private void BtnHistory_Click(object sender, RoutedEventArgs e)
         {
-            var win = new System.Windows.Window();
-            win.Content = new ReportUserControl();
+            MainWindow win = new MainWindow();
+            win.OpenHistoryControl();
             win.Show();
-
+          
         }
+
     }
 }

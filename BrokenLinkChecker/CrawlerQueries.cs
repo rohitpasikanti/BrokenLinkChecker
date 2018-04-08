@@ -99,7 +99,7 @@ namespace BrokenLinkChecker
         public static Collection<CrawlerDetail> GetCrawlerDetails()
         {
             StringBuilder query = new StringBuilder();
-            query.AppendLine("SELECT RowID, * FROM CrawlerDetail ORDER BY CrawlDate DESC");
+            query.AppendLine("SELECT * FROM CrawlerDetail ORDER BY CrawlDate DESC");
             DataTable dt = new DataTable();
 
             using (MySqlConnection conn = new MySqlConnection(ConnectionString))

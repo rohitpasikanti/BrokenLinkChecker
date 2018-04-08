@@ -7,7 +7,7 @@
         mc:Ignorable="d" Icon="icon.png"
         Title="BrokenLinkChecker" Height="600" Width="1000" WindowState="Maximized" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}">
     
-    <Border Name="MainBorder">
+    <Border x:Name="MainBorder">
         <local:HomeControl/>
 
     </Border>

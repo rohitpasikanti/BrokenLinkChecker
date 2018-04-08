@@ -28,7 +28,8 @@ namespace BrokenLinkChecker
         }
        
             ProjectControl SelectedProjectControl = new ProjectControl();
-        
+        ReportUserControl SelectedHistoryControl = new ReportUserControl();
+
 
         public void OpenProjectControl()
             {
@@ -41,6 +42,10 @@ namespace BrokenLinkChecker
             MainBorder.Child = new HomeControl();
             
 
+        }
+        public void OpenHistoryControl()
+        {
+            MainBorder.Child = SelectedHistoryControl;
         }
         private void MainWindow_Loaded(Object sender, RoutedEventArgs e)
         {

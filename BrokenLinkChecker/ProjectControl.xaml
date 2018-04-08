@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:BrokenLinkChecker"
              mc:Ignorable="d" xmlns:wpf="clr-namespace:Wpf.Controls;assembly=Wpf.TabControl"
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="600" d:DesignWidth="1000">
     <Grid>
         <TabControl x:Name="tabControl" Background="Transparent" >
      

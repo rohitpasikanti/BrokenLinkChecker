@@ -23,6 +23,7 @@ namespace BrokenLinkChecker
         public ReportUserControl()
         {
             InitializeComponent();
+            Loaded += ReportUserControl_Loaded;
         }
 
         private void ReportUserControl_Loaded(object sender, RoutedEventArgs e)
